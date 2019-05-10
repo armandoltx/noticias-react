@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Header from './componentes/Header';
 function App() {
   return (
     <div className="App">
-      <p>Noticias</p>
+      <Header titulo={"Noticias"} />
     </div>
   );
 }
