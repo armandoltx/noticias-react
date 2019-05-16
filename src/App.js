@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './componentes/Header';
+import Noticias from './componentes/Noticias';
 
 
 class App extends Component {
@@ -15,7 +16,6 @@ class App extends Component {
   consultarNoticias = () => {
     console.log("consultarNoticias");
     // leer la url y agregar el API key
-    //https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=dfe2d931c07b4e1f8b2fe27eaa49e40d
     const appId = 'dfe2d931c07b4e1f8b2fe27eaa49e40d';
     let url = `https://newsapi.org/v2/top-headlines?country=au&category=general&apiKey=${appId}`;
 
@@ -39,8 +39,11 @@ class App extends Component {
   
   render() {
     return (
-      <div className="App">
+      <div className="contenedor-app">
         <Header titulo={"Noticias"} />
+        <div className="container white contenedor-noticias">
+          <Noticias noticias={this.state.noticias} />
+        </div>
       </div>
     );
   }
