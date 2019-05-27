@@ -14,7 +14,8 @@ class App extends Component {
     this.consultarNoticias();
   }
 
-  consultarNoticias = () => {
+  consultarNoticias = (categoria) => {
+    console.log("categoria dentro de ConsultarNoticias en App.js ", categoria);
     console.log("consultarNoticias");
     // leer la url y agregar el API key
     const appId = 'dfe2d931c07b4e1f8b2fe27eaa49e40d';
@@ -43,7 +44,7 @@ class App extends Component {
       <div className="contenedor-app">
         <Header titulo={"Noticias"} />
         <div className="container white contenedor-noticias">
-          <Formulario />
+          <Formulario consultarNoticias={this.consultarNoticias}/>
           <Noticias noticias={this.state.noticias} />
         </div>
       </div>
