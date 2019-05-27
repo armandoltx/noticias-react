@@ -7,8 +7,8 @@ class Formulario extends Component {
 
   cambiarCategoria = (e) => {
     e.preventDefault();
-    console.log("categoriaRef ", this.categoriaRef);
-    console.log("categoriaRef ", this.categoriaRef.current.value);
+    // console.log("categoriaRef ", this.categoriaRef);
+    // console.log("categoriaRef ", this.categoriaRef.current.value);
     // Agregarlo y enviarlo por props hacia el padre
     // en este caso no tenemos que crear un metodo en el padre, pq "consultarNoticias" es el metodo que tiene q recibir las  categorias
     this.props.consultarNoticias(this.categoriaRef.current.value);
