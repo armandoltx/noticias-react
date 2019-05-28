@@ -15,4 +15,8 @@ class Noticias extends Component {
   }
 }
 
+Noticias.propTypes = {
+  noticias: PropTypes.array.isRequired
+}
+
 export default Noticias;

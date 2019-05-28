@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Noticia = ({noticia}) => { // si aqui ponemos props
   console.log("Noticias ", {noticia});
@@ -24,5 +25,9 @@ const Noticia = ({noticia}) => { // si aqui ponemos props
     </div>
   );
 };
+
+Noticia.propTypes = {
+  noticia: PropTypes.object.isRequired
+} 
 
 export default Noticia;
